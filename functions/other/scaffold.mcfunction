@@ -1,0 +1,1 @@
+execute @a[tag=scaffold] ~~~ fill ~~-1~ ~~-1~ wool 3 replace air

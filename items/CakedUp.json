@@ -1,0 +1,47 @@
+{
+	"format_version": "1.17.11",
+	"minecraft:item": {
+		"description": {
+			"identifier": "CakedUp:menu",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:hand_equipped": true,
+			"minecraft:should_despawn": false,
+			"minecraft:allow_off_hand": false,
+			"minecraft:foil": true,
+			"minecraft:icon": {
+				"texture": "cake"
+			},
+			"minecraft:display_name": {
+				"value": "§b§l§l§bⒸ§dⒶ§bⓀ§dⒺ§bⒹ§r\n§l§bClick to Scroll, §l§aSneak to Select\n"
+			},
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "caked:scroll"
+				}
+			},
+			"minecraft:cooldown": {
+				"category": "gui",
+				"duration": 0.3
+			}
+		},
+		"events": {
+			"caked:scroll":{
+				"run_command":{
+					"command":[
+						"execute @s[scores={main=1}] ~~~ scoreboard players add @s main_scroll 1",
+						"execute @s[scores={combat=1}] ~~~ scoreboard players add @s combat_scroll 1",
+						"execute @s[scores={visual=1}] ~~~ scoreboard players add @s visual_scroll 1",
+						"execute @s[scores={movement=1}] ~~~ scoreboard players add @s movement_scroll 1",
+						"execute @s[scores={player=1}] ~~~ scoreboard players add @s player_scroll 1",
+						"execute @s[scores={world=1}] ~~~ scoreboard players add @s world_scroll 1",
+						"execute @s[scores={exploit=1}] ~~~ scoreboard players add @s exploit_scroll 1",
+						"execute @s[scores={misc=1}] ~~~ scoreboard players add @s misc_scroll 1"
+					]
+				}
+			}
+		}
+	}
+}

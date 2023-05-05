@@ -1,0 +1,29 @@
+{
+	"folders": [
+		{
+			"name": "functions",
+			"path": "../functions"
+		},
+		{
+			"name": "projectdino",
+			"path": "../../../../projectdino"
+		},
+		{
+			"name": "entities",
+			"path": "../entities"
+		},
+		{
+			"name": "items",
+			"path": "."
+		},
+		{
+			"name": "structures",
+			"path": "../structures"
+		},
+		{
+			"name": "ui",
+			"path": "../ui"
+		}
+	],
+	"settings": {}
+}

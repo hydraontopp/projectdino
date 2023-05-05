@@ -1,0 +1,1 @@
+execute @s ~~~ tp @s ~~~ facing @p[rm=2] true

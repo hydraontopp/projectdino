@@ -1,0 +1,42 @@
+{
+	"format_version": "1.17.11",
+	"minecraft:item": {
+		"description": {
+			"identifier": "CakedUp:openMenu",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:hand_equipped": true,
+			"minecraft:should_despawn": false,
+			"minecraft:allow_off_hand": false,
+			"minecraft:foil": false,
+			"minecraft:icon": {
+				"texture": "cake"
+			},
+			"minecraft:display_name": {
+				"value": "§b§l§l§bⒸ§dⒶ§bⓀ§dⒺ§bⒹ §dⓊ§bⓅ§r\n§l§1Click to Open"
+			},
+			"minecraft:on_use": {
+				"on_use": {
+					"event": "caked:scroll"
+				}
+			},
+			"minecraft:cooldown": {
+				"category": "gui",
+				"duration": 0.3
+			}
+		},
+		"events": {
+			"caked:scroll":{
+				"run_command":{
+					"command":[
+						"execute @s ~~~ scoreboard players set @s main 1",
+						"execute @s ~~~ scoreboard players set @s main_scroll 1",
+						"function other/replace-cakeopen"
+					]
+				}
+			}
+		}
+	}
+}
