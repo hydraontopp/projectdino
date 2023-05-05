@@ -1,2 +1,2 @@
 # projectdino
-testt
+test
